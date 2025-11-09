@@ -16,3 +16,9 @@ npm install
 ```
 npm run dev
 ```
+
+### Rodar o no seu navegador
+
+```
+https://leonardoaborghelot.github.io/analisador-lexico/
+```
