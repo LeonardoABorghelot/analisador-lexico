@@ -51,6 +51,8 @@ const App: React.FC = () => {
     setStateHistory([State.INITIAL]);
   };
 
+  const lastTypedChar = currentInput.slice(-1);
+
   return (
     <div className="app">
       <div className="app-container">
@@ -137,6 +139,25 @@ const App: React.FC = () => {
           </ul>
         </section>
       </div>
+        <div className="alphabet">
+          {Array.from("abcdefghijklmnopqrstuvwxyz").map((c) => {
+            const isActive = c === lastTypedChar;
+            const isError = lastTypedChar && !/^[a-z]$/.test(lastTypedChar);
+
+            return (
+              <span
+                key={c}
+                className={
+                  "alpha-char " +
+                  (isActive ? "alpha-active " : "") +
+                  (isError ? "alpha-error " : "")
+                }
+              >
+                {c}
+              </span>
+            );
+          })}
+        </div>
     </div>
   );
 };

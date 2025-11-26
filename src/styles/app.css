@@ -185,3 +185,29 @@
   margin-bottom: 0.4rem;
   font-size: 0.9rem;
 }
+
+.alphabet {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 22px;
+  justify-content: center;
+  user-select: none;
+}
+
+.alpha-char {
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.alpha-active {
+  background: #4f46e5;
+  color: white;
+  transform: scale(1.2);
+}
+
+.alpha-error {
+  background: #dc2626;
+  color: white;
+}
